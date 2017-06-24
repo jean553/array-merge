@@ -12,6 +12,22 @@ mod am {
         end: usize,
         middle: usize,
     ) {
+
+        let mut i = start;
+        let mut j = middle;
+
+        for index in start..end {
+
+            if source[i] <= source[j] && i < middle {
+                destination[index] = source[i];
+                i += 1;
+            }
+            else
+            {
+                destination[index] = source[j];
+                j += 1;
+            }
+        }
     }
 }
 
