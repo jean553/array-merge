@@ -3,8 +3,8 @@ mod am {
     /// Merges two arrays togethers.
     /// The two arrays are:
     /// source[start; middle] and source[middle; end]
-    /// The modified array is `destination`.
-    /// `source` and `destination` should be the sames
+    /// The destination array is `destination`.
+    #[allow(dead_code)]
     pub fn merge(
         source: &mut [u8],
         destination: &mut [u8],
