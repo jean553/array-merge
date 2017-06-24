@@ -1,9 +1,7 @@
 mod am {
 
-    /// Merges two arrays togethers.
-    /// The two arrays are:
-    /// source[start; middle] and source[middle; end]
-    /// The destination array is `destination`.
+    /// Takes one source array, divides it into two arrays using `start`, `middle` and `end`
+    /// delimiters. Overwrites the destination array.
     #[allow(dead_code)]
     pub fn merge(
         source: &mut [u8],
