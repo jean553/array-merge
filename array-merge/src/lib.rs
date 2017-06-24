@@ -39,21 +39,42 @@ mod tests {
     #[test]
     fn test_two_items_sort() {
 
-        let mut source = [5, 3];
-        let mut destination = [5, 3];
-        
+        let mut source = [3, 5, 2, 7];
+        let mut destination = [0, 0, 0, 0];
+
         am::merge(
             &mut source,
             &mut destination,
             0,
-            1,
+            4,
             2,
         );
 
         assert_eq!(
             destination,
-            [3, 5],
+            [2, 3, 5, 7],
             "two items array is not sorted",
+        );
+    }
+
+    #[test]
+    fn test_four_items_sort() {
+
+        let mut source = [8, 15, 23, 0, 17, 25];
+        let mut destination = [0, 0, 0, 0, 0, 0];
+
+        am::merge(
+            &mut source,
+            &mut destination,
+            0,
+            6,
+            3,
+        );
+
+        assert_eq!(
+            destination,
+            [0, 8, 15, 17, 23, 25],
+            "four items array is not sorted",
         );
     }
 }
