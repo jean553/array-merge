@@ -18,7 +18,7 @@ mod am {
 
         for index in start..end {
 
-            if source[i] <= source[j] && i < middle {
+            if (j >= end || source[i] <= source[j]) && i < middle {
                 destination[index] = source[i];
                 i += 1;
             }
@@ -37,7 +37,7 @@ mod tests {
     use am;
 
     #[test]
-    fn test_two_items_sort() {
+    fn test_four_items_sort() {
 
         let mut source = [3, 5, 2, 7];
         let mut destination = [0, 0, 0, 0];
@@ -58,7 +58,7 @@ mod tests {
     }
 
     #[test]
-    fn test_four_items_sort() {
+    fn test_six_items_sort() {
 
         let mut source = [8, 15, 23, 0, 17, 25];
         let mut destination = [0, 0, 0, 0, 0, 0];
@@ -75,6 +75,27 @@ mod tests {
             destination,
             [0, 8, 15, 17, 23, 25],
             "four items array is not sorted",
+        );
+    }
+
+    #[test]
+    fn test_ten_items_sort() {
+
+        let mut source = [8, 15, 23, 188, 190, 0, 17, 25, 150, 170];
+        let mut destination = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+        am::merge(
+            &mut source,
+            &mut destination,
+            0,
+            10,
+            5,
+        );
+
+        assert_eq!(
+            destination,
+            [0, 8, 15, 17, 23, 25, 150, 170, 188, 190],
+            "ten items array is not sorted",
         );
     }
 }
