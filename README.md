@@ -77,3 +77,9 @@ step 4  |  3  |  5  |                 |  2  |  7  |
 ```
 cargo test
 ```
+
+## Documentation
+
+```
+cargo rustdoc -- --no-defaults
+```
