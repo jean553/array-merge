@@ -1,5 +1,7 @@
 # array-merge
 
+[![Current Crates.io Version](https://img.shields.io/crates/v/array-merge.svg)](https://crates.io/crates/array-merge)
+
 Simple library that merges two arrays together. 
 
 ```
