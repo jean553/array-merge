@@ -1,4 +1,4 @@
-mod am {
+pub mod am {
 
     /// Takes one source array, divides it into two arrays using `start`, `middle` and `end`
     /// delimiters. Overwrites the destination array.
