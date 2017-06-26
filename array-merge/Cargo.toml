@@ -2,5 +2,7 @@
 name = "array-merge"
 version = "0.1.0"
 authors = ["Jean LELIEVRE <Jean.LELIEVRE@supinfo.com>"]
+description = "merges two sorted array parts together"
+license = "MIT"
 
 [dependencies]
